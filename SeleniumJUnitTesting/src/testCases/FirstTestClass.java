@@ -33,9 +33,7 @@ public class FirstTestClass {
 	 * Anschliessend wird geprueft, ob der title richtig angezeigt wird.
 	 */
 	@Test
-	public void googleTest() {
-		System.out.println("Starting test " + new Object(){}.getClass().getEnclosingMethod().getName());
-		
+	public void googleTest() {		
 //		Arrange
 		unitDriver.get("https://www.google.de/");
 		
@@ -47,8 +45,6 @@ public class FirstTestClass {
 //		Assert
 		Assert.assertEquals("Cheese! - Google-Suche", unitDriver.getTitle());
 		Assert.assertNotEquals("Ein falscher Text", unitDriver.getTitle());
-		
-		System.out.println("Ending test " + new Object(){}.getClass().getEnclosingMethod().getName());
 	}
 
 	/**
@@ -58,8 +54,6 @@ public class FirstTestClass {
 	 */
 	@Test
 	public void ppiTest() {
-		System.out.println("Starting test " + new Object(){}.getClass().getEnclosingMethod().getName());
-		
 //		Arrange
 		unitDriver.get("http://www.ppi.de");
 		
@@ -69,8 +63,6 @@ public class FirstTestClass {
 //		Assert
 		Assert.assertEquals("PPI Aktiengesellschaft: PPI Aktiengesellschaft: Startseite", unitDriver.getTitle());
 		Assert.assertNotEquals("Ein falscher Text", unitDriver.getTitle());
-		
-		System.out.println("Ending test " + new Object(){}.getClass().getEnclosingMethod().getName());
 	}
 
 	@AfterClass
